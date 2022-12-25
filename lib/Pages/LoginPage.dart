@@ -123,7 +123,7 @@ class _LoginPageState extends State<LoginPage> {
                           color: Theme.of(context).colorScheme.primary,
                           onPressed: () async {
 
-                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                                 content: Text('Signing...')));
 
                             try {
@@ -137,14 +137,13 @@ class _LoginPageState extends State<LoginPage> {
                                 );
                               }else{
                                 ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                                    content: Text('Error! Try google signin.')));
+                                    content: Text('Error! Try google signing.')));
                               }
                             } on PlatformException catch (e) {
                               ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                                   content:
                                   Text('No PlayStore Detected on the device!')));
                             }
-
                           },
                           child: Container(
                               alignment: Alignment.center,
@@ -174,7 +173,6 @@ class _LoginPageState extends State<LoginPage> {
                           focusElevation: 0,
                           highlightElevation: 0,
                           onPressed: () {
-
                             Navigator.push(
                             context,
                             MaterialPageRoute(builder: (context) => Register()),
@@ -200,7 +198,7 @@ class _LoginPageState extends State<LoginPage> {
                       Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => HomePage(),
+                          builder: (context) => const HomePage(),
                         ),
                       );
                     }else{

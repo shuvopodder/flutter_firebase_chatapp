@@ -4,7 +4,6 @@ import 'package:flutter_firebase_chatapp/Pages/HomePage.dart';
 import 'package:provider/provider.dart';
 
 import '../Provider/Authentication.dart';
-import '../Provider/Home.dart';
 
 class Register extends StatefulWidget {
   Register({Key? key}) : super(key: key);

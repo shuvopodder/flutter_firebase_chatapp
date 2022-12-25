@@ -122,7 +122,8 @@ class Authentication extends ChangeNotifier {
         final List<DocumentSnapshot> documents = result.docs;
         if (documents.length == 0) {
           // Writing data to server because here is a new user
-          firebaseFirestore.collection(FirestoreConstant.pathUserCollection).doc(userCredential.user!.uid).set({
+          firebaseFirestore.collection(FirestoreConstant.pathUserCollection)
+              .doc(userCredential.user!.uid).set({
             FirestoreConstant.nickname: text1,
             FirestoreConstant.photoUrl: userCredential.user!.photoURL,
             FirestoreConstant.id: userCredential.user!.uid,
